@@ -48,7 +48,6 @@ Api.prototype.handleWelcome = function(init, api) {
   var options = {
     size: init.board.size
   };
-  console.log(options);
   api.board = new Board(options);
   for (var i in init.pieces) {
     options = init.pieces[i];

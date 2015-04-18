@@ -9,8 +9,6 @@ $(document).ready(function(){
   api = new Api(function(newBoard, id) {
     board = newBoard;
     camera = new Camera(board);
-    console.log(id);
-    console.log(board.pieces);
     camera.setTarget(board.pieces[id]);
     setInterval(function() {
       board.update();
