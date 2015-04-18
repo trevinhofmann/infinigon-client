@@ -84,3 +84,8 @@ Piece.prototype.update = function(board) {
   this.div.css('left', (this.position.x - this.size/2)+'px');
   this.div.css('bottom', (this.position.y - this.size/2)+'px');
 };
+
+Piece.prototype.deconstruct = function() {
+  this.div.remove();
+  board.removePiece(this);
+};
