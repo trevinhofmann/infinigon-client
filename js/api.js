@@ -10,6 +10,11 @@ function Api(callback) {
 
   this.socket = io();
 
+  this.socket.on('disconnect', function() {
+    alert('You were disconnected.');
+    location.reload();
+  });
+
   this.socket.emit('join', 'free-for-all');
 
   this.socket.on('welcome', function(init) {
