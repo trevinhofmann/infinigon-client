@@ -58,6 +58,7 @@ Api.prototype.handleWelcome = function(init, api) {
 };
 
 Api.prototype.handleInstantiate = function(pieces, board) {
+  console.log(pieces);
   for (var i in pieces) {
     var options = pieces[i];
     options.board = board;
@@ -66,7 +67,6 @@ Api.prototype.handleInstantiate = function(pieces, board) {
 };
 
 Api.prototype.handleUpdate = function(pieces) {
-  console.log(pieces);
   for (var i in pieces) {
     var piece = api.board.pieces[pieces[i].id];
     piece.updateTarget(pieces[i].target);
