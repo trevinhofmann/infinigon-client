@@ -26,7 +26,7 @@ $(document).ready(function(){
           x: mouse.x - offset.left,
           y: offset.top + board.size.height - mouse.y
         });
-      }, 40);
+      }, 35);
     }
   });
 
@@ -38,7 +38,7 @@ $(document).ready(function(){
           x: mouse.x - offset.left,
           y: offset.top + board.size.height - mouse.y
         });
-      }, 40);
+      }, 35);
     }
   });
 
