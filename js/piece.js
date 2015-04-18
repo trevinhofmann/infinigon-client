@@ -89,3 +89,17 @@ Piece.prototype.deconstruct = function() {
   this.div.remove();
   board.removePiece(this);
 };
+
+Piece.prototype.updatePosition = function(position) {
+  this.position = {
+    x: position.x,
+    y: position.y
+  };
+};
+
+Piece.prototype.updateTarget = function(target) {
+  this.target = {
+    x: target.x,
+    y: target.y
+  };
+};
