@@ -23,3 +23,12 @@ function Board(options) {
   this.pieces = {};
 
 }
+
+Board.prototype.addPiece = function(id, piece) {
+  this.pieces[id] = piece;
+  this.div.append(piece.div);
+};
+
+Board.prototype.removePiece = function(id) {
+  delete this.pieces[id];
+};
