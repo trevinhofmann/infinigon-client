@@ -32,3 +32,9 @@ Board.prototype.addPiece = function(id, piece) {
 Board.prototype.removePiece = function(id) {
   delete this.pieces[id];
 };
+
+Board.prototype.update = function() {
+  for (var i in this.pieces) {
+    this.pieces[i].update();
+  }
+};
