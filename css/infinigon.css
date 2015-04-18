@@ -23,3 +23,32 @@ body {
   background-color: #000;
   overflow: hidden;
 }
+
+.board {
+    background-color: #959595;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.piece {
+    border: 1px solid #424242;
+    background-color: #d2d2d2;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.projectile {
+    border-color: #f00;
+    background-color: #fbb;
+    z-index: 0;
+}
+
+.human {
+    background-color: #7491ae;
+}
+
+.player {
+    border-color: #1c61ff;
+}
