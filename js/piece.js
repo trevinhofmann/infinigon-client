@@ -105,24 +105,3 @@ Piece.prototype.updateTarget = function(target) {
     y: target.y
   };
 };
-
-Piece.prototype.fire = function(target) {
-  if (!this.weapon) {
-    return; // no weapon
-  }
-
-  if (this.weapon.last + this.weapon.cooldown > Date.now()) {
-    return; // still on cooldown
-  }
-
-  var options = {
-    piece: this,
-    target: {
-      x: target.x,
-      y: target.y
-    }
-  };
-  new Projectile(options);
-
-  this.weapon.last = Date.now();
-};
