@@ -49,6 +49,14 @@ body {
     background-color: #7491ae;
 }
 
+.zombie {
+    background-color: #669900;
+}
+
+.tagged {
+    background-color: #FF0000;
+}
+
 .player {
     border-color: #1c61ff;
 }
