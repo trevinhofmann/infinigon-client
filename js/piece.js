@@ -1,7 +1,5 @@
 function Piece(options) {
 
-  console.log(options);
-
   if (!options) {
     throw new Error('options must be specified');
   }
