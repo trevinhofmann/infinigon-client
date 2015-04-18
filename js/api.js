@@ -52,7 +52,6 @@ Api.prototype.handleWelcome = function(init, api) {
   for (var i in init.pieces) {
     options = init.pieces[i];
     options.board = api.board;
-    console.log(options);
     new Piece(options);
   }
   api.callback(api.board, init.id);
