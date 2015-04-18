@@ -28,19 +28,11 @@ function Api(callback) {
 
 }
 
-Api.prototype.sendLeftClick = function(x, y) {
-  var target = {
-    x: x,
-    y: y
-  };
+Api.prototype.sendLeftClick = function(target) {
   this.socket.emit('leftClick', target);
 };
 
-Api.prototype.sendRightClick = function(x, y) {
-  var target = {
-    x: x,
-    y: y
-  };
+Api.prototype.sendRightClick = function(target) {
   this.socket.emit('rightClick', target);
 };
 
