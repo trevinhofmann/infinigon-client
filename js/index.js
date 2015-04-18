@@ -22,11 +22,10 @@ $(document).ready(function(){
     if (!mouse.leftDownInterval) {
       mouse.leftDownInterval = setInterval(function(){
         var offset = board.div.offset();
-        var target = {
+        api.sendLeftClick({
           x: mouse.x - offset.left,
           y: offset.top + board.size.height - mouse.y
-        };
-        api.sendLeftClick(target);
+        });
       }, 40);
     }
   });
@@ -35,11 +34,10 @@ $(document).ready(function(){
     if (!mouse.rightDownInterval) {
       mouse.rightDownInterval = setInterval(function() {
         var offset = board.div.offset();
-        var target = {
+        api.sendRightClick({
           x: mouse.x - offset.left,
           y: offset.top + board.size.height - mouse.y
-        };
-        api.sendRightClick(target);
+        });
       }, 40);
     }
   });
