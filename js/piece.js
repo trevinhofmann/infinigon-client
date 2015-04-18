@@ -1,11 +1,11 @@
-function Piece(id, options) {
-
-  if (!id) {
-    throw new Error('id must be specified');
-  }
+function Piece(options) {
 
   if (!options) {
     throw new Error('options must be specified');
+  }
+
+  if (!options.id) {
+    throw new Error('options.id must be specified');
   }
 
   if (!options.board) {
@@ -52,7 +52,7 @@ function Piece(id, options) {
   this.div.css('bottom', this.position.y+'px');
   this.div.css('border-width', this.borderSize+'px');
 
-  this.board.addPiece(id, this);
+  this.board.addPiece(this.id, this);
 
   if (options.lifespan) {
     var piece = this;

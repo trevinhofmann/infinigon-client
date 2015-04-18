@@ -59,10 +59,9 @@ Api.prototype.handleWelcome = function(init, api) {
 
 Api.prototype.handleInstantiate = function(pieces, board) {
   for (var i in pieces) {
-    var id = pieces[i].id;
     var options = pieces[i];
     options.board = board;
-    new Piece(id, options);
+    new Piece(options);
   }
 };
 
